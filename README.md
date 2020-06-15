@@ -68,7 +68,7 @@ Prompt ("stop" "q" "quit" "exit" to quit, h or ? or 'help' to Help):
 
 ### Download
 
-The program can be downloaded from [here](https://github.com/OceanEx/websocket-api/blob/master/src/ws_client.py). This Python program is compatible with Python 2.7.x and Python 3.x.
+The program can be downloaded from [here](https://github.com/OceanEx/ocean-websocket-client/blob/master/src/ws_client.py). This Python program is compatible with Python 2.7.x and Python 3.x.
 
 
 ## User Guide
