@@ -43,7 +43,6 @@ userid = "ID4XXXXXX"
 apikid = "KIDXXXXXX"
 
 # prod url 
-#url = "wss://ws-engine.oceanex.pro/ws/v1"
 url = "wss://ws.oceanex.pro/ws/v1"
 
 class OceanExWSListener(object):
