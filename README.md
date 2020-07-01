@@ -22,6 +22,7 @@
 | 0.0.0              | first version     |2020-03-04|
 | 0.0.1              | add more index. change single cancel order to multiple cancel  orders   |2020-03-25|
 | 0.0.2              | publish public version |2020-06-10|
+| 0.0.3              | modify prod url to "wss://ws.oceanex.pro/ws/v1" |2020-07-01|
 
 ## Websocket testing program
 
