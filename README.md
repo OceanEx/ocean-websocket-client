@@ -83,7 +83,7 @@ userid = "ID4XXXXXX"
 apikid = "KIDXXXXXX"
 
 # prod url
-url = "wss://ws-engine.oceanex.pro/ws/v1"
+url = "wss://ws.oceanex.pro/ws/v1"
 ```
 
 Make sure your **key.pem** file is under same directory where you run this program. The program has currently hard coded the file location as below: 
