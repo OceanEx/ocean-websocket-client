@@ -43,7 +43,8 @@ userid = "ID4XXXXXX"
 apikid = "KIDXXXXXX"
 
 # prod url 
-url = "wss://ws-engine.oceanex.pro/ws/v1"
+#url = "wss://ws-engine.oceanex.pro/ws/v1"
+url = "wss://ws.oceanex.pro/ws/v1"
 
 class OceanExWSListener(object):
     def __init__(self, endpoint, logger, userid=None, apikid=None):
@@ -387,7 +388,7 @@ class OceanExWSListener(object):
         self.send_json(data)
 
     def get_orderbook(self):
-	args = raw_input('MARKET_ID,LEVEL,PRECISION (example: vetusdt, 2, 6)\n> ')
+        args = input('MARKET_ID,LEVEL,PRECISION (example: vetusdt, 2, 6)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
         if len(args) != 3:
@@ -410,7 +411,7 @@ class OceanExWSListener(object):
         self.send_json(data)
 
     def get_k_line(self):
-	args = raw_input('MARKET_ID,LIMIT,PERIOD (example: vetusdt, 30, 5)\n> ')
+        args = input('MARKET_ID,LIMIT,PERIOD (example: vetusdt, 30, 5)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
         if len(args) != 3:
@@ -435,9 +436,9 @@ class OceanExWSListener(object):
         if self.authenticated == False:
            print('\nNot Authenticated. Please Authenticate first')
            self.logger.error('not authenticated')
-           return 
+           return
 
-	args = raw_input('MARKET_ID,SIDE,PRICE,VOLUME,ORD_TYPE (example: vetusdt, buy, 0.75, 1000, limit)\n> ')
+        args = input('MARKET_ID,SIDE,PRICE,VOLUME,ORD_TYPE (example: vetusdt, buy, 0.75, 1000, limit)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
 
@@ -467,7 +468,7 @@ class OceanExWSListener(object):
            self.logger.error('not authenticated')
            return 
 
-	args = raw_input('OID (example: 18)\n> ')
+        args = input('OID (example: 18)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
 
@@ -499,7 +500,7 @@ class OceanExWSListener(object):
            self.logger.error('not authenticated')
            return 
 
-	args = raw_input('OIDs (example:18,19,23)\n> ')
+        args = input('OIDs (example:18,19,23)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
 
@@ -555,7 +556,8 @@ class OceanExWSListener(object):
            self.logger.error('not authenticated')
            return 
 
-	args = raw_input('MARKET_ID, ORD_TYPE (example: vetusdt, limit)\n> ')
+
+        args = input('MARKET_ID, ORD_TYPE (example: vetusdt, limit)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
 
@@ -583,7 +585,7 @@ class OceanExWSListener(object):
            self.logger.error('not authenticated')
            return 
 
-	args = raw_input('OID (example: 23)\n> ')
+        args = input('OID (example: 23)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
 
@@ -613,7 +615,7 @@ class OceanExWSListener(object):
            self.logger.error('not authenticated')
            return 
 
-	args = raw_input('OID (example: 23)\n> ')
+        args = input('OID (example: 23)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
 
@@ -639,9 +641,9 @@ class OceanExWSListener(object):
         if self.authenticated == False:
            print('\nNot Authenticated. Please Authenticate first')
            self.logger.error('not authenticated')
-           return 
+           return
 
-	args = raw_input('MARKET_ID (example: vetusdt)\n> ')
+        args = input('MARKET_ID (example: vetusdt)\n> ')
         args = args.replace(' ', '')
         args = args.split(",")
 
@@ -703,10 +705,10 @@ def banner():
 
 def clean_screen():
     if name == 'nt':
-	_ = system('cls')
+        _ = system('cls')
     # for mac and linux(here, os.name is 'posix')
     else:
-	_ = system('clear')
+        _ = system('clear')
 
 def console():
 
@@ -719,7 +721,7 @@ def console():
     while True:
         try:
             sleep(0.5)
-            choice = raw_input('Prompt ("stop" "q" "quit" "exit" to quit, h or ? or \'help\' to Help):\n> ')
+            choice = input('Prompt ("stop" "q" "quit" "exit" to quit, h or ? or \'help\' to Help):\n> ')
             if choice in ['stop',"q", "quit","exit"]:
                 ows.disconnect()
                 break
@@ -793,4 +795,4 @@ if __name__ == "__main__":
     logger.addHandler(handler)
 
     console()
-    print 'end.... '
+    print('end.... ')
